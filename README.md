@@ -1,82 +1,106 @@
-<h1 align="center">Hello Guys! We Are OSSInsight! 👁️</h1>
+# ¡Hola! Soy Esau 👋
 
-<div align="center">
-<a href="https://ossinsight.io">
-  <img src="/web/static/img/screenshots/homepage.gif" height=360
-</a>
-</div>
+Bienvenido a mi perfil de GitHub. Soy un apasionado del desarrollo de software y me encanta trabajar en proyectos que desafían mis habilidades y conocimientos. Aquí te presento uno de mis proyectos básicos en C++: una calculadora.
 
-<h4 align="center">
-  <b><a href="https://ossinsight.io/explore/">Data Explorer</a></b>
-  •
-  <b><a href="https://ossinsight.io/collections/open-source-database">Repo Rankings</a></b>
-  •
-  <b><a href="https://ossinsight.io/analyze/Ovilia">Developer Analytics</a></b>
-  •
-  <a href="https://ossinsight.io/analyze/pingcap/tidb">Repo Analytics</a>
-  •
-  <a href="https://ossinsight.io/collections/open-source-database">Collections</a>
-  •
-  <a href="https://ossinsight.io/docs/workshop">Workshop</a>
-  •
-  <a href="https://ossinsight.io/blog">Blog</a>
-  •
-  <a href="https://ossinsight.io/docs">API</a>
-  •
-  <a href="https://twitter.com/OSSInsight">Twitter</a>
-</h3>
+## Calculadora Básica en C++
 
-## Introduction
+Este proyecto es una calculadora simple que permite realizar las siguientes operaciones matemáticas:
 
-OSS Insight is a powerful tool that provides comprehensive, valuable, and trending insights into the open source world by analyzing 6+ billion rows of GitHub events data. 
- 
-[🎦 Video - OSS Insight: Easiest New Way to Analyze Open Source Software](https://www.youtube.com/watch?v=6ofDBgXh4So&t=1s)
+- Suma
+- Resta
+- Multiplicación
+- División
 
-## Embed Real-time Widget in Repo's / Personal README.md within 30s!
+### ¿Cómo funciona?
 
-For all charming widgets, please [Check it out 👉](https://next.ossinsight.io/widgets?utm_source=github&utm_medium=referral), here are some examples:
+La calculadora presenta un menú al usuario con las opciones de operaciones disponibles. Después de seleccionar una operación, el usuario ingresa dos números y la calculadora muestra el resultado de la operación seleccionada. El proceso se repite hasta que el usuario decide salir.
 
+### Ejemplo de Uso
 
-| Repository Activity Trends | Collaborative Productivity - Last 28 days |
-| ----------- | ----------- |
-|<img src="https://next.ossinsight.io/widgets/official/compose-activity-trends/thumbnail.png?repo_id=41986369&image_size=auto" />|<img src="https://next.ossinsight.io/widgets/official/compose-last-28-days-collaborative-productivity/thumbnail.png?repo_id=41986369&image_size=auto" />|
+```cpp
+// Calculadora Básica en C++
+// Autor: Esau
+// Descripción: Esta calculadora permite realizar operaciones básicas como suma, resta, multiplicación y división.
 
-| Repository Performance Stats - Last 28 days | Active Contributors - Last 28 days |
-| ----------- | ----------- |
-|<img src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=41986369&image_size=auto" />|<img src="https://next.ossinsight.io/widgets/official/compose-recent-active-contributors/thumbnail.png?repo_id=41986369&limit=100&image_size=auto"/>|
+#include <iostream>
+using namespace std;
 
-| Star Geographic Distribution | Star History |
-| ----------- | ----------- |
-|<img src="https://next.ossinsight.io/widgets/official/analyze-repo-stars-map/thumbnail.png?activity=stars&repo_id=41986369&image_size=auto" />|<img src="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=41986369&image_size=auto" />|
+class Calculadora {
+public:
+    void presentar() {
+        cout << "Hola, soy Esau, y esta es una calculadora básica en C++.\n";
+    }
 
-| Company Affiliation | Lines of Code Changes |
-| ----------- | ----------- |
-|<img src="https://next.ossinsight.io/widgets/official/analyze-repo-company/thumbnail.png?activity=stars&repo_id=41986369&image_size=auto" />|<img src="https://next.ossinsight.io/widgets/official/analyze-repo-loc-per-month/thumbnail.png?repo_id=41986369&image_size=auto" />|
+    void menu() {
+        cout << "Seleccione la operación que desea realizar:\n";
+        cout << "1. Suma\n";
+        cout << "2. Resta\n";
+        cout << "3. Multiplicación\n";
+        cout << "4. División\n";
+        cout << "5. Salir\n";
+    }
 
-| Pull Request Size | Pull Request Lifecycle |
-| ----------- | ----------- |
-|<img src="https://next.ossinsight.io/widgets/official/analyze-repo-pull-requests-size-per-month/thumbnail.png?repo_id=41986369&image_size=auto" />|<img src="https://next.ossinsight.io/widgets/official/analyze-repo-pull-request-open-to-merged/thumbnail.png?repo_id=41986369&image_size=auto" />|
+    void ejecutar() {
+        int opcion;
+        double num1, num2;
 
-| Currently Working On - Last 28 days | Top Active Contributors - Last 28 Days |
-| ----------- | ----------- |
-|<img src="https://next.ossinsight.io/widgets/official/compose-currently-working-on/thumbnail.png?activity_type=all&user_id=12960671&image_size=auto" />|<img src="https://next.ossinsight.io/widgets/official/compose-recent-top-contributors/thumbnail.png?repo_id=41986369&image_size=auto" />|
+        do {
+            menu();
+            cin >> opcion;
 
-| Repository Annual Ranking | Find More |
-| ----------- | ----------- |
-|<img src="https://next.ossinsight.io/widgets/official/collection-annually-ranking/thumbnail.png?activity=stars&collection_id=2&image_size=auto" />|<a href="https://next.ossinsight.io/widgets?utm_source=github&utm_medium=referral">Visit our website</a >|
+            if (opcion == 5) {
+                break;
+            }
 
-## Contact us
+            cout << "Ingrese dos números: ";
+            cin >> num1 >> num2;
 
-<a href="https://twitter.com/OSSInsight" target="_blank">
-<img src=https://img.shields.io/badge/twitter-%2300acee.svg?color=1DA1F2&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
+            switch (opcion) {
+                case 1:
+                    cout << "Resultado: " << suma(num1, num2) << endl;
+                    break;
+                case 2:
+                    cout << "Resultado: " << resta(num1, num2) << endl;
+                    break;
+                case 3:
+                    cout << "Resultado: " << multiplicacion(num1, num2) << endl;
+                    break;
+                case 4:
+                    cout << "Resultado: " << division(num1, num2) << endl;
+                    break;
+                default:
+                    cout << "Opción no válida. Intente nuevamente.\n";
+            }
 
-<a href="https://github.com/pingcap/ossinsight/discussions" target="_blank">
-<img src=https://img.shields.io/badge/github-%2300acee.svg?color=181717&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+        } while (opcion != 5);
+    }
 
-<a href="mailto:ossinsight@pingcap.com" target="_blank">
-<img src=https://img.shields.io/badge/gmail-%2300acee.svg?color=EA4335&style=for-the-badge&logo=gmail&logoColor=white alt=gmail style="margin-bottom: 5px;" />
+private:
+    double suma(double a, double b) {
+        return a + b;
+    }
 
-## Sponsors
-<a href="https://en.pingcap.com/tidb-cloud/?utm_source=ossinsight&utm_medium=referral">
-<img src="/web/static/img/tidb-cloud-logo-w.png" height=50 />
-</a>
+    double resta(double a, double b) {
+        return a - b;
+    }
+
+    double multiplicacion(double a, double b) {
+        return a * b;
+    }
+
+    double division(double a, double b) {
+        if (b != 0) {
+            return a / b;
+        } else {
+            cout << "Error: División por cero.\n";
+            return 0;
+        }
+    }
+};
+
+int main() {
+    Calculadora calc;
+    calc.presentar();
+    calc.ejecutar();
+    return 0;
+}
